@@ -2,7 +2,7 @@ class course:
     def __init__(self,course_name):
         self.course_name = course_name
 
-class Studentdata:
+class Student:
     def __init__(self,Student_name,Roll_no,Authonication_key):
         self.Student_name = Student_name
         self.Roll_no = Roll_no
@@ -16,7 +16,7 @@ class Studentdata:
         return self.__Authonication_key
 
 
-def view_data():
+def show_all_students():
     with open("students.txt","r") as line:
         for each_line in line:
             print(each_line)
@@ -41,11 +41,12 @@ while True:
     else:
         print("Congratulations Your Registration Process has been successfully Completed. Now you can Registration next one by click Run code button and input data into Terminal interface")
         courses = course(x)
-        data = Studentdata(y, z, p)
-        print(data.course_name)
+        data = Student(y, z, p)
+        #print(data.course_name)
     with open("Students.txt", "a") as db_file:
         db_file.write(f"Name: {data.Student_name}, Roll No: {data.Roll_no},  Course Name: {x},  Password: {data.get_authnication_key()} \n")
-    # view_data()
+    show_all_students()
     break
+
 
 
