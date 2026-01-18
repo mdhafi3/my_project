@@ -1,0 +1,26 @@
+Name: Rahim, Roll: 101, Course: Python
+Name: Rahim, Roll: 101, Course: Mathematics
+Name: Karim, Roll: 102, Course: Mathematics
+Name: Rahim, Roll: 101, Course: Python
+Name: Rahim, Roll: 101, Course: Mathematics
+Name: Karim, Roll: 102, Course: Mathematics
+Name: Md Hafejul islam,Roll No: 1001, Course Name: python batch 13, Password: Keyword@focus 
+Name: Mst Nadia Afroj,Roll No: 1001, Course Name: React and js, Password: Key@get.cc 
+Name: Rahim, Roll: 101, Course: Python
+Name: Rahim, Roll: 101, Course: Mathematics
+Name: Karim, Roll: 102, Course: Mathematics
+Name: Md Hasen ali,Roll No: 101, Course Name: HTML and CSs, Password: 12345687 
+Name: Md Hasen ali,Roll No: 1003, Course Name: Asp.Net COre, Password: .Net@Core123 
+Name: Mst sultana Rahman, Roll No: 1004,  Course Name: python & html,  Password: C#123@py 
+Name: Sanjim sultana mim, Roll No: 1006,  Course Name: Jango and python,  Password: pythion@gmail. 
+Name: John milton, Roll No: 1009,  Course Name: sql server 2.3,  Password: mk*fyi 
+Name: jagirs kaidr, Roll No: 1011,  Course Name: python,  Password: NCP@natore4 
+Name: Rahim, Roll: 101, Course: Python
+Name: Rahim, Roll: 101, Course: Mathematics
+Name: Karim, Roll: 102, Course: Mathematics
+Name: Rahim, Roll: 101, Course: Python
+Name: Rahim, Roll: 101, Course: Mathematics
+Name: Karim, Roll: 102, Course: Mathematics
+Name: Rahim, Roll: 101, Course: Python
+Name: Rahim, Roll: 101, Course: Mathematics
+Name: Karim, Roll: 102, Course: Mathematics
