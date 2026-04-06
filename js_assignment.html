@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Assignment B-13</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background: #f4f7fb;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(204, 255, 1, 0.1);
+  }
+
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #017107;
+  }
+
+  .deleteBtn {
+    background: #ff1a01;
+  }
+
+  .deleteBtn:hover {
+    background: #fd1c03;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #b5f5f5;
+    text-align: left;
+  }
+
+  th {
+    background: #01a8c6;
+
+  }
+
+  th:hover {
+    background: #a0ffef;
+  }
+  
+  h1{
+    font-size: xx-large;
+    color:orange;
+  }
+
+  footer{
+    text-align: center;
+  }
+  
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+ <marquee behavior="" direction="">
+    <h1> Java Script Assignment for Batch-13  </h1>
+ </marquee>
+
+  <div class="card">
+    <h2> Expense Tracker</h2>
+
+    <div class="input-group">
+      <input type="text" id="amount" placeholder="Enter amount">
+      <button id="addBtn">Add</button>
+    </div>
+
+    <h3>Total: <span id="total">0</span>.00 (BDT)</h3>
+  </div>
+
+  
+  <div class="card">
+    <h2> Book List</h2>
+
+    <div class="input-group">
+        
+      <input type="text" id="bookName" placeholder="Book Name">
+      <input type="text" id="authorName" placeholder="Author Name">
+      <button id="saveBtn">Save</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+            <th>Serial</th>
+          <th>Book</th>
+          <th>Author</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="bookList"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+let expenses = [];
+
+const amountInput = document.getElementById("amount");
+const totalDisplay = document.getElementById("total");
+const addBtn = document.getElementById("addBtn");
+
+function calculateTotal() {
+  const total = expenses.reduce((sum, value) => sum + value, 0);
+  totalDisplay.innerText = total;
+}
+
+addBtn.addEventListener("click", () => {
+  const value = amountInput.value;
+
+  if (value === "" || isNaN(value)) {
+    alert("Enter valid number!");
+    return;
+  }
+
+  expenses.push(Number(value));
+  calculateTotal();
+  amountInput.value = "";
+});
+
+
+let slcnt=1;
+const bookNameInput = document.getElementById("bookName");
+const authorNameInput = document.getElementById("authorName");
+const saveBtn = document.getElementById("saveBtn");
+const bookList = document.getElementById("bookList");
+
+saveBtn.addEventListener("click", () => {
+  const bookName = bookNameInput.value;
+  const authorName = authorNameInput.value;
+
+  if (bookName === "" || authorName === "") {
+    alert("Fill all fields!");
+    return;
+  }
+
+  const tr = document.createElement("tr");
+
+  tr.innerHTML = `
+  <td data-label="Serial">${slcnt++}</td>
+    <td data-label="Book">${bookName}</td>
+    <td data-label="Author">${authorName}</td>
+    <td data-label="Action">
+      <button class="deleteBtn">Delete</button>
+    </td>
+  `;
+
+  bookList.appendChild(tr);
+
+  bookNameInput.value = "";
+  authorNameInput.value = "";
+});
+
+bookList.addEventListener("click", (e) => {
+  if (e.target.classList.contains("deleteBtn")) {
+    e.target.closest("tr").remove();
+  }
+});
+</script>
+<footer>
+    &copy; All right reserved interactive Cares
+</footer>
+</body>
+</html>
